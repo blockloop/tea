@@ -12,6 +12,8 @@ go get -u github.com/blockloop/tea
 
 [Godoc](https://godoc.org/github.com/blockloop/tea)
 
+## Example
+
 ```go
 package main
 
