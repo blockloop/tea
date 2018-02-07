@@ -27,6 +27,9 @@ func URLInt(r *http.Request, key, validation string) (int, error) {
 		return 0, err
 	}
 
+	if len(validation) == 0 {
+		return i, nil
+	}
 	return i, Validate.VarCtx(r.Context(), &i, validation)
 }
 
@@ -45,6 +48,9 @@ func URLInt64(r *http.Request, key, validation string) (int64, error) {
 		return 0, err
 	}
 
+	if len(validation) == 0 {
+		return i, nil
+	}
 	return i, Validate.VarCtx(r.Context(), &i, validation)
 }
 
@@ -63,6 +69,9 @@ func URLFloat(r *http.Request, key, validation string) (float64, error) {
 		return 0, err
 	}
 
+	if len(validation) == 0 {
+		return i, nil
+	}
 	return i, Validate.VarCtx(r.Context(), &i, validation)
 }
 
@@ -81,5 +90,8 @@ func URLUint(r *http.Request, key, validation string) (uint64, error) {
 		return 0, err
 	}
 
+	if len(validation) == 0 {
+		return i, nil
+	}
 	return i, Validate.VarCtx(r.Context(), &i, validation)
 }
