@@ -6,6 +6,13 @@ import (
 	"github.com/go-chi/render"
 )
 
+// Responder is the default responder used to write the messages back to the
+// client. It uses render.DefaultResponder by default which will respond using
+// the appropriate data type based on the Accept header. You can set it to
+// render.JSON, render.XML, render.Data, etc. You can also create your own
+// custom responder.
+var Responder = render.DefaultResponder
+
 // StatusHandlerFunc is a handler that returns a status code and a message body
 type StatusHandlerFunc func(w http.ResponseWriter, r *http.Request) (int, interface{})
 
@@ -18,7 +25,7 @@ func Handler(h StatusHandlerFunc) http.HandlerFunc {
 			return
 		}
 
-		render.JSON(w, r, response)
+		Responder(w, r, response)
 	}
 }
 
@@ -30,7 +37,7 @@ func Handler(h StatusHandlerFunc) http.HandlerFunc {
 //
 // Example:
 //   func(w http.ResponseWriter, r *http.Request) (int, interface{}) {
-//           u, p, ok := r.BasicAuth();
+//           u, p, ok := r.BasicAuth()
 //           if !ok {
 //                   return StatusError(StatusUnauthorized)
 //	     }

@@ -2,6 +2,12 @@
 
 
 [[projects]]
+  name = "github.com/go-chi/chi"
+  packages = ["."]
+  revision = "e83ac2304db3c50cf03d96a2fcd39009d458bc35"
+  version = "v3.3.2"
+
+[[projects]]
   name = "github.com/go-chi/render"
   packages = ["."]
   revision = "9f855fadd4b8cde7773f9ef51f6b2705af239519"
@@ -31,6 +37,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "79374e21142cc43a5a4f7dd80eb14f8b1d820e716b34026127c5f84334bc5a43"
+  inputs-digest = "bd9525cb530c0a661be5d25b746c1891f88c968cde859ccd1e9430f59e9466ee"
   solver-name = "gps-cdcl"
   solver-version = 1
