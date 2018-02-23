@@ -7,11 +7,10 @@ import (
 )
 
 // Responder is the default responder used to write the messages back to the
-// client. It uses render.DefaultResponder by default which will respond using
-// the appropriate data type based on the Accept header. You can set it to
-// render.JSON, render.XML, render.Data, etc. See github.com/go-chi/render
-// for more info
-var Responder = render.DefaultResponder
+// client. It uses render.JSON by default which will respond using JSON encoding.
+// You can set it to render.JSON, render.XML, render.Data, etc. See
+// github.com/go-chi/render for more info
+var Responder = render.JSON
 
 // StatusHandlerFunc is a handler that returns a status code and a message body
 type StatusHandlerFunc func(w http.ResponseWriter, r *http.Request) (int, interface{})
