@@ -10,10 +10,10 @@ import "net/http"
 //
 // Example:
 // func(w http.ResponseWriter, r *http.Request) (int, interface{}) {
-//         u, p, ok := r.BasicAuth()
-//         if !ok {
-//                 return StatusError(StatusUnauthorized)
-//         }
+// 	u, p, ok := r.BasicAuth()
+// 	if !ok {
+// 		return StatusError(StatusUnauthorized)
+// 	}
 // }
 func StatusError(status int) (int, *ErrorResponse) {
 	return Error(status, http.StatusText(status))
@@ -30,10 +30,10 @@ func StatusError(status int) (int, *ErrorResponse) {
 //
 // Example:
 // func CreateUser(w http.ResponseWriter, r *http.Request) (int, interface{}) {
-//         // ...
-//         if req.Name == "" {
-//                 return Error(400, "name is required")
-//         }
+// 	// ...
+// 	if req.Name == "" {
+// 		return Error(400, "name is required")
+// 	}
 // }
 func Error(status int, err string) (int, *ErrorResponse) {
 	return status, &ErrorResponse{
