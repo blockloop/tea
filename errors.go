@@ -41,15 +41,19 @@ func StatusError(status int) (int, *ErrorResponse) {
 //
 func Error(status int, err string) (int, *ErrorResponse) {
 	return status, &ErrorResponse{
-		Code:  status,
-		Error: err,
+		Code: status,
+		Err:  err,
 	}
 }
 
 // ErrorResponse is a generic response object
 type ErrorResponse struct {
-	Code  int    `json:"code"`
-	Error string `json:"error"`
+	Code int    `json:"code"`
+	Err  string `json:"error"`
+}
+
+func (e ErrorResponse) Error() string {
+	return e.Err
 }
 
 // NotFound is a handler for 404 requests
