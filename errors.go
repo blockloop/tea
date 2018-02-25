@@ -1,6 +1,9 @@
 package tea
 
-import "net/http"
+import (
+	"fmt"
+	"net/http"
+)
 
 // StatusError creates a response message consisting of the status code
 // and the http.StatusText which applies to that code.
@@ -44,6 +47,12 @@ func Error(status int, err string) (int, *ErrorResponse) {
 		Code: status,
 		Err:  err,
 	}
+}
+
+// Errorf formats the message and returns the *ErrorResponse with the
+// formatted message according to package fmt
+func Errorf(status int, format string, v ...interface{}) (int, *ErrorResponse) {
+	return Error(status, fmt.Sprintf(format, v...))
 }
 
 // ErrorResponse is a generic response object
