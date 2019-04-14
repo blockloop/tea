@@ -4,7 +4,7 @@ go 1.12
 
 require (
 	github.com/apex/log v1.1.0
-	github.com/go-chi/chi v3.3.2+incompatible
+	github.com/go-chi/chi v3.3.4+incompatible
 	github.com/go-chi/render v1.0.0
 	github.com/go-playground/locales v0.11.2 // indirect
 	github.com/go-playground/universal-translator v0.16.0 // indirect
