@@ -1,5 +1,11 @@
 # Tea
 
+[![GoDoc](https://godoc.org/github.com/blockloop/tea?status.svg)](https://godoc.org/github.com/blockloop/tea)
+[![Travis](https://img.shields.io/travis/blockloop/tea.svg)](https://travis-ci.org/blockloop/tea)
+[![Coveralls github](https://img.shields.io/coveralls/github/blockloop/tea.svg)](https://coveralls.io/github/blockloop/tea)
+[![Report Card](https://goreportcard.com/badge/github.com/blockloop/tea)](https://goreportcard.com/report/github.com/blockloop/tea)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=blockloop/tea)](https://dependabot.com)
+
 Tea is a utility library intended to help improve the flow of your Go HTTP servers. Tea goes well with [Chi](https://github.com/go-chi/chi), but works well with the standard lib.
 
 ## Install
