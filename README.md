@@ -8,12 +8,6 @@
 
 Tea is a utility library intended to help improve the flow of your Go HTTP servers. Tea goes well with [Chi](https://github.com/go-chi/chi), but works well with the standard lib.
 
-## Install
-
-```bash
-go get -u github.com/blockloop/tea
-```
-
 ## Docs
 
 [Godoc](https://godoc.org/github.com/blockloop/tea)
