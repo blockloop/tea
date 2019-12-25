@@ -10,5 +10,5 @@ require (
 	github.com/go-playground/universal-translator v0.16.0 // indirect
 	github.com/pkg/errors v0.8.0 // indirect
 	github.com/stretchr/testify v1.3.0
-	gopkg.in/go-playground/validator.v9 v9.28.0
+	gopkg.in/go-playground/validator.v9 v9.31.0
 )
