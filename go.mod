@@ -9,6 +9,6 @@ require (
 	github.com/go-playground/locales v0.11.2 // indirect
 	github.com/go-playground/universal-translator v0.16.0 // indirect
 	github.com/pkg/errors v0.8.0 // indirect
-	github.com/stretchr/testify v1.3.0
+	github.com/stretchr/testify v1.5.1
 	gopkg.in/go-playground/validator.v9 v9.28.0
 )
